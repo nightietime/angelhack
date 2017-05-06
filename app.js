@@ -159,7 +159,7 @@ app.post("/tramdb", function(req, res) {
     var userInput = {"runID": runId, "stopID": stopId, "crowdednessLevel": crowdedness, "dirtyLevel": dirtyLevel, "speedingLevel": speedingLevel};
     Crowdedness.create(userInput, function(err, object) {
         if (err) {
-            console.log("Error");
+            console.log("Error", err);
         }
         else {
             console.log("Insertion success" + object);
