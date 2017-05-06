@@ -63,7 +63,7 @@ app.get("/departures", cors(), function(req, res) {
             if (response.headers['content-type'] == 'text/html') res.json({status: 'error'});
 
             // Get Crowdedness from database
-            Database.Crowdedness.find({stopID: stopID}, function(err, result) {
+            Crowdedness.find({stopID: stopID}, function(err, result) {
                 // Iterate result and calculate the crowdedness for the requested stop id
                 var total = 0;
                 var runCrowdedness = {};

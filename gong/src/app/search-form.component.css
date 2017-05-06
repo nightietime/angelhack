@@ -4,3 +4,14 @@
 .ng-invalid:not(form)  {
   border-left: 5px solid #a94442; /* red */
 }
+
+/* Heading */
+h1 {
+
+}
+
+/* Form */
+form {
+	max-width: 700px;
+	margin: auto;
+}
