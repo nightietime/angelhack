@@ -68,7 +68,7 @@ body {
   display: table-cell;
   vertical-align: top;
 }
-.cover-container {
+.cover-containe {
   margin-right: auto;
   margin-left: auto;
 }
@@ -183,7 +183,7 @@ body {
 @media (min-width: 45em) {
   .masthead,
   .mastfoot,
-  .cover-container {
+  .cover-containe {
     width: 45em;
   }
 }
