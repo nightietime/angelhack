@@ -169,6 +169,6 @@ app.post("/tramdb", function(req, res) {
 });
 
 // Listen and serve web app
-app.listen(3000, function(req, res) {
+app.listen(3001, function(req, res) {
 	console.log("Server has started..");
 });
