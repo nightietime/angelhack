@@ -1,18 +1,35 @@
-html,
-body {
-  height: 100%;
-  background-color: #fff;
+body > my-departures > departure-detail > div > div > div > div {
+  max-width: 800px;
+  margin:auto;
 }
-
 body {
   color: #000;
   text-align: left;
   text-shadow: none;
 }
 
+.container.section {
+  margin-bottom:20px;
+}
+
+body > my-departures > departure-detail > div > div > div > div > div > div.current-tram > div.route-no > strong {
+  font-size: 31px;
+}
+
+body > my-departures > departure-detail > div > div > div > div > div > div.current-tram > div.route-no > span {
+  font-size: 25px;
+}
+
+body > my-departures > departure-detail > div > div > div > div > div > div.current-tram > div.upcoming-tram > h1 {
+  font-size: 18px;
+}
+
+#next-tram > div:nth-child(2) > div > div.upcoming-tram > h1, #next-tram > div:nth-child(3) > div > div.upcoming-tram > h1 {
+  font-size: 33px;
+}
 
 .jumbotron {
-  background-image: url("../resources/img/96_hero.JPG");
+  background-image: url("./96_hero.JPG");
   min-height: 200px;
   padding: 0px;
   background-size: cover;
@@ -118,7 +135,6 @@ body {
 
 .next-tram {
   padding: 10px;
-  margin-top: 10px;
   text-align: center;
   background-color: #BEEB9F;
 }
