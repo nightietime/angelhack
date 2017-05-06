@@ -41,13 +41,13 @@
                 <br/>
 
                 <div class="row"> <!-- buttons -->
-                  <button (click)="onInputData(0, 1, 0)" (click)="onSubmit()"type="submit" data-toggle="tooltip" title="Drunk People"
+                  <button (click)="onInputData(0, 1, 0, group[0].run_id)" (click)="onSubmit()"type="submit" data-toggle="tooltip" title="Drunk People"
                   class="btn btn-warning btn-md" role="button"><i class="fa fa-beer" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>DRUNK</button>
-                  <button (click)="onInputData(0, 1, 0)" (click)="onSubmit()" type="submit"  data-toggle="tooltip" title="Dirty"
+                  <button (click)="onInputData(0, 1, 0, group[0].run_id)" (click)="onSubmit()" type="submit"  data-toggle="tooltip" title="Dirty"
                   class="btn btn-warning btn-md" role="button"><i class="fa fa-trash" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>DIRTY</button>
-                  <button (click)="onInputData(0, 0, 1)" (click)="onSubmit()" type="submit" data-toggle="tooltip" title="Unruly Driver"
+                  <button (click)="onInputData(0, 0, 1, group[0].run_id)" (click)="onSubmit()" type="submit" data-toggle="tooltip" title="Unruly Driver"
                   class="btn btn-warning btn-md" role="button"><i class="fa fa-fast-forward" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>SPEEDING</button>
-                  <button (click)="onInputData(0, 0, 1)" (click)="onSubmit()" type="submit" data-toggle="tooltip" title="Other Information"
+                  <button (click)="onInputData(0, 0, 1, group[0].run_id)" (click)="onSubmit()" type="submit" data-toggle="tooltip" title="Other Information"
                   class="btn btn-warning btn-md" role="button"><i class="fa fa-info-circle" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>OTHERS</button>
                 </div>
 
