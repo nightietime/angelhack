@@ -29,15 +29,15 @@
             <div class="next-tram">
 
               <button class="btn btn-md btn-primary btn-info" data-toggle="collapse"
-              data-target="#next-tram">Next Tram</button>
+              attr.data-target="{{'#next-tram-' + group[0].run_id}}">Next Tram</button>
               <button class="btn btn-md btn-primary btn-info" data-toggle="collapse"
-              data-target="#report-crowdedness">Report Crowdedness</button>
+              attr.data-target="{{'#report-crowdedness-' + group[0].run_id}}">Report Crowdedness</button>
               <button class="btn btn-md btn-primary btn-info" data-toggle="collapse"
-              data-target="#report-condition">Report Condition</button>
+              attr.data-target="{{'#report-condition-' + group[0].run_id}}">Report Condition</button>
 
 
 
-              <div id="report-condition" class="collapse">
+              <div id="{{'report-condition-' + group[0].run_id}}" class="collapse">
                 <br/>
 
                 <div class="row"> <!-- buttons -->
@@ -54,7 +54,7 @@
                 <br/>
               </div>
 
-              <div id="next-tram" class="collapse">
+              <div id="{{'next-tram-' + group[0].run_id}}" class="collapse">
                 <div *ngFor="let departure of group; let i=index;">
                   <div *ngIf="i>0"> <!-- do not include first departure -->
                     <div class="upcoming-tram">
@@ -70,7 +70,7 @@
                 </div>
               </div>
 
-              <div id="report-crowdedness" class="collapse">
+              <div id="{{'report-crowdedness-' + group[0].run_id}}" class="collapse">
                 <div class="well">
                   <div class="row">
                     <h5>Please rate the tram crowdedness</h5>
