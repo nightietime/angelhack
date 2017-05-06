@@ -11,6 +11,7 @@ import { STOPS } from './stops';
 export class SearchFormComponent {
   autocomplete: any[] = STOPS['stops'];
   result: any;
+  stop: any;
 
   autocompleteListFormatter = (data: any) => {
     let html = `${data.stop_name}`;
@@ -26,17 +27,21 @@ export class SearchFormComponent {
 
     
     var sDist = -1;
-    var stop;
+    var stop1;
     for (let s of stops) {
       var dlat = lat - s['stop_latitude'];
       var dlong = long -  s['stop_longitude'];
       var nd = dlat*dlat + dlong*dlong;
       if (sDist < 0 || nd < sDist) {
-        stop = s['stop_name'];
+        stop1 = s['stop_name'];
         sDist = nd;
       }
     }
-    return stop;
+     this.result = s;
+  }
+
+  ngOnInit(): void {
+    this.getClosestStop();
   }
 
   // onSubmit(): void {

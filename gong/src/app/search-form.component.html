@@ -6,15 +6,12 @@
 
       <div class="inner cover">
         <h1 class="cover-heading" style="font-size:6em">GongGo</h1>
-          <p class="lead">Search real-time tram arrival schedule and crowd-sourced data on tram conditions.</p>
-
+          <p class="lead">Search real-time tram arrival schedule and crowd-sourced data on tram conditions. {{ stop }}</p>
 
           <form #searchForm="ngForm">
             <div class="input-group">
-              <input autocomplete="off" style="width: 100%; height:40px; font-size:16px; border-radius:5px 0 0 5px" class="form-control" placeholder="{{getClosestStop()}}"
-
-                  auto-complete [(ngModel)]="result" [source]="autocomplete" name="stopName" [min-chars]="2" [max-num-list]="10" [list-formatter]="autocompleteListFormatter"
-                  value-property-name="stop_id" display-property-name="stop_name" />
+              <input autocomplete="off" name="stop_name" style="width: 100%; height:40px; font-size:16px; border-radius:5px 0 0 5px" class="form-control" auto-complete [(ngModel)]="result" [source]="autocomplete" [min-chars]="2" [max-num-list]="10" [list-formatter]="autocompleteListFormatter" value-property-name="stop_id" display-property-name="stop_name"
+                  />
               <span class="input-group-btn">
                 <button [routerLink]="['/departures', result?.stop_id]"
                     class="btn btn-success" type="submit" style="height: 40px">Go!</button>
