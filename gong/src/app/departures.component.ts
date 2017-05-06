@@ -1,7 +1,7 @@
 import 'rxjs/add/operator/switchMap';
 import * as Rx from 'rxjs/Rx';
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Http }       from '@angular/http';
@@ -10,21 +10,13 @@ import { DeparturesService } from './departures.service';
 
 @Component({
   selector: 'my-departures',
-  template: `
-
-  <departure-detail
-      [departures]="departures"
-      [directions]="directions"
-      [disruptions]="disruptions"
-      [routes]="routes"
-      [runs]="runs">
-
-  </departure-detail>
-
-  `
+  templateUrl: './departures.component.html',
+  styleUrls: ['./departures.component.css', './tram-styles.css'],
 })
 export class DeparturesComponent implements OnInit {
   stopId: string;
+  stopName: any;
+  stopNo: any;
   data: any;
   departures: any;
   directions: any;
@@ -49,6 +41,17 @@ export class DeparturesComponent implements OnInit {
   updateDeparturesData(data: any): void {
     console.log(data);
     this.data = data;
+    var stopName = data.ptvData.stops[+this.stopId].stop_name;
+    var re = '\\d+$';
+    var matches = stopName.match(re);
+    if (matches) {
+      var match = matches[0];
+      this.stopNo = match;
+      this.stopName = stopName.slice(0, stopName.length - match.length - 1);
+    }
+    else {
+      this.stopName = stopName;
+    }
     this.departures = data.ptvData.departures;
     this.directions = data.ptvData.directions;
     this.disruptions = data.ptvData.disruptions;

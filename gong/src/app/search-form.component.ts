@@ -24,7 +24,7 @@ export class SearchFormComponent {
     var lat = -37.808232;
     var long = 144.905246;
 
-    
+
     var sDist = -1;
     var stop;
     for (let s of stops) {

@@ -1,0 +1,22 @@
+<!-- Jumbotron -->
+<div class="jumbotron">
+  <div class="cover-container" *ngIf="stopName && stopNo">  <!-- do not show if not populated yet -->
+    <h3>YOU ARE AT</h3>
+    <h1>{{stopName}}</h1>
+    <h3>{{'Stop ' + stopNo}}</h3>
+    <br>
+    <h3>Not Here?&nbsp;
+      <button type="button" class="btn btn-warning btn-md"
+        style="margin-top: -2px; padding-top: 2px; padding-bottom: 4px"
+        routerLink="/">Change!</button></h3>
+
+  </div>
+</div>
+
+<departure-detail
+    [departures]="departures"
+    [directions]="directions"
+    [disruptions]="disruptions"
+    [routes]="routes"
+    [runs]="runs">
+</departure-detail>
