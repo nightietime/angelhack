@@ -69,7 +69,8 @@ __decorate([
 DepartureDetailComponent = __decorate([
     core_1.Component({
         selector: 'departure-detail',
-        templateUrl: './departure-detail.component.html'
+        templateUrl: "./departure-detail.component.html",
+        styleUrls: ['./departures.component.css', './tram-styles.css']
     }),
     __metadata("design:paramtypes", [tram_service_1.TramService, http_1.Http])
 ], DepartureDetailComponent);
