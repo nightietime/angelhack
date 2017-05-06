@@ -73,13 +73,13 @@ app.get("/departures", cors(), function(req, res) {
                     // Compare based on run_id
                     // Create key if not exist in runCrowdedness object
                     if (!(result[i].runID in runCrowdedness)) {
-                        runCrowdedness[result[i].runID] = {crowdedness: Number(result[i].crowdednessLevel), count: 1, average: 0, dirtyLevel: 1, speedingLevel: 1};
+                        runCrowdedness[result[i].runID] = {crowdedness: Number(result[i].crowdednessLevel), count: 1, average: 0, dirtyLevel: Number(result[i].dirtyLevel), speedingLevel: Number(result[i].speedingLevel)};
                     }
                     // Else increment crowdedness level and count
                     else {
                         runCrowdedness[result[i].runID].crowdedness += Number(result[i].crowdednessLevel);
-                        runCrowdedness[result[i].runID].dirtyLevel++;
-                        runCrowdedness[result[i].runID].speedingLevel++;
+                        runCrowdedness[result[i].runID].dirtyLevel += Number(result[i].dirtyLevel);
+                        runCrowdedness[result[i].runID].speedingLevel += Number(result[i].speedingLevel);
                         runCrowdedness[result[i].runID].count++;
                     }
                 }
@@ -152,8 +152,11 @@ app.post("/tramdb", function(req, res) {
     var stopId = req.body.stop_id;
     var dirtyLevel = req.body.dirtyLevel;
     var speedingLevel = req.body.speedingLevel;
+    console.log(crowdedness);
+
+    // Dirty level 1 or 0, speeding level 1 or 0
     var userInput = {"runID": runId, "stopID": stopId, "crowdednessLevel": crowdedness, "dirtyLevel": dirtyLevel, "speedingLevel": speedingLevel};
-    Database.Crowdedness.create(userInput, function(err, object) {
+    Crowdedness.create(userInput, function(err, object) {
         if (err) {
             console.log("Error");
         }
