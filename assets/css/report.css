@@ -112,10 +112,8 @@
   background-color: #BEEB9F;
 }
 
-.btn-default {
-    max-width: 120px;
-    max-height: 120px;
-    min-width: 120px;
+.btn-warning {
+    margin: 20px;
 }
 
 @media (min-width: 1200px) {
