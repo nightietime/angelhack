@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="site-wrapper">
 
   <div class="site-wrapper-inner">
@@ -6,21 +5,23 @@
     <div class="cover-container">
 
       <div class="inner cover">
-        <h1 class="cover-heading">GongGo</h1>
-          <p class="lead">We provide real-time tram
-          arrival data and crowd-sourced data about the tram conditions.
-            We also allow you to give feedback about the condition of the
-            tram you are using. </p>
-
+        <h1 class="cover-heading" style="font-size:6em">GongGo</h1>
+          <p class="lead">Search real-time tram arrival schedule and crowd-sourced data on tram conditions. {{ stop }}</p>
 
           <form #searchForm="ngForm">
             <div class="input-group">
-              <input style="width: 100%" class="form-control" placeholder="Stop name"
+<<<<<<< HEAD
+              <input autocomplete="off" style="width: 100%; height:40px; font-size:16px; border-radius:5px 0 0 5px" class="form-control" placeholder="{{getClosestStop().stop_name}}"
+
                   auto-complete [(ngModel)]="result" [source]="autocomplete" name="stopName" [min-chars]="2" [max-num-list]="10" [list-formatter]="autocompleteListFormatter"
                   value-property-name="stop_id" display-property-name="stop_name" />
+=======
+              <input autocomplete="off" name="stop_name" style="width: 100%; height:40px; font-size:16px; border-radius:5px 0 0 5px" class="form-control" auto-complete [(ngModel)]="result" [source]="autocomplete" [min-chars]="2" [max-num-list]="10" [list-formatter]="autocompleteListFormatter" value-property-name="stop_id" display-property-name="stop_name"
+                  />
+>>>>>>> ffe084000b80e579da28286f18513e595296b157
               <span class="input-group-btn">
                 <button [routerLink]="['/departures', result?.stop_id]"
-                    class="btn btn-success" type="submit">Go!</button>
+                    class="btn btn-success" type="submit" style="height: 40px">Go!</button>
               </span>
             </div>
           </form>
@@ -38,28 +39,6 @@
   </div>
 
 </div>
-=======
-        
-    <div class="wrapper">
-        <div class="site-wrapper-inner">
-            <div class="container">
-              <form #searchForm="ngForm" (ngSubmit)="onSubmit()">
-                <label for="stopName">Search for a tram stop</label>
-                <div class="input-group">
-                  <input style="width: 100%" class="form-control"
-                      auto-complete [(ngModel)]="result" [source]="autocomplete" name="stopName" [min-chars]="2" [max-num-list]="10" [list-formatter]="autocompleteListFormatter"
-                      value-property-name="stop_id" display-property-name="stop_name" />
-                  <span class="input-group-btn">
-                    <button class="btn btn-success" type="submit">Go!</button>
-                  </span>
-                </div>
-              </form>
-            </div>
-        </div>
-    </div>
-
-
->>>>>>> 4da138de949309ca947e8509be46c2ec1114ca4b
 
 <!-- <form method="GET" action="/nextram" class="col-md-8 col-xs-10">
 									<div class="input-group">
