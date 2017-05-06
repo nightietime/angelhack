@@ -10,13 +10,22 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static("assets"));
 
-/*************************PTV***********************************/
+/****************************PTV***********************************/
 /* PTV, trams */
 var PTV = require('./ptvApi.js');
 var ptv = new PTV(1000824, 'c269558f-5915-11e6-a0ce-06f54b901f07');
 var tramData = require("./assets/json/tramstops.json");
 
 /**********************MONGOOSE***********************************/
+// Connect to mongo db
+mongoose.connect('mongodb://localhost/tram_db',function(err){
+    if(!err) {
+        console.log('Connected to mongo');
+    }else {
+        console.log('Failed to connect to mongo');
+    }
+});
+
 var Schema = mongoose.Schema;
 
 var crowdednessSchema = new Schema({
@@ -26,15 +35,6 @@ var crowdednessSchema = new Schema({
 });
 
 var Crowdedness = mongoose.model("crowdedness", crowdednessSchema);
-
-// Connect to mongo db
-mongoose.connect('mongodb://localhost/tram_db',function(err){
-    if(!err) {
-        console.log('Connected to mongo');
-    }else {
-        console.log('Failed to connect to mongo');
-    }
-});
 
 /***********************************PTV ROUTES********************************/
 
