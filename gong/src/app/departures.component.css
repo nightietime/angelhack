@@ -3,7 +3,7 @@ body > my-departures > departure-detail > div > div > div > div {
   margin:auto;
 }
 
-body {
+.white {
   background:white;
   color: #000;
   text-align: left;

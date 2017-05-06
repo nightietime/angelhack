@@ -38,7 +38,14 @@ export class DeparturesComponent implements OnInit {
       this.stopId = params['stopid'];
       this.getDeparturesData();
     });
+    let body = document.getElementsByTagName('body')[0];
+    body.classList.add("white");
   }
+
+   ngOnDestroy() {
+        let body = document.getElementsByTagName('body')[0];
+        body.classList.remove("white");
+   }
 
   updateDeparturesData(data: any): void {
     // console.log(data);

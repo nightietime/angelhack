@@ -27,6 +27,12 @@ var DeparturesComponent = (function () {
             _this.stopId = params['stopid'];
             _this.getDeparturesData();
         });
+        var body = document.getElementsByTagName('body')[0];
+        body.classList.add("white");
+    };
+    DeparturesComponent.prototype.ngOnDestroy = function () {
+        var body = document.getElementsByTagName('body')[0];
+        body.classList.remove("white");
     };
     DeparturesComponent.prototype.updateDeparturesData = function (data) {
         // console.log(data);
