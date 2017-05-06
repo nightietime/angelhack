@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!-- Font-awesome used for icons -->
+		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <!-- Custom styles for this template -->
     <link href="./assets/css/report.css" rel="stylesheet">
@@ -48,6 +50,24 @@
     <!-- MAIN -->
     <div class="main container-fluid">
 
+			<div class="progress">
+          <div class="progress-bar progress-bar-decent" style="width: 35%">
+            Decent
+          </div>
+          <div class="progress-bar progress-bar-empty" style="width: 20%">
+            Empty
+          </div>
+          <div class="progress-bar progress-bar-full" style="width: 10%">
+            Full
+          </div>
+          <div class="progress-bar progress-bar-overcrowded" style="width: 10%">
+            Overcrowded
+          </div>
+          <div class="progress-bar progress-bar-full" style="width: 25%">
+            Full
+          </div>
+      </div>
+
       <div class="row">
         <div class="blank col-lg-3 hidden-md-down"></div>
         <div class="right-section col-lg-9 col-xs-12">
@@ -67,6 +87,12 @@
                 <h1>5 min</h1>
               </div>
 
+							<div class="progress">
+                <div aria-valuemax="60" aria-valuemin="0" aria-valuenow="40" class="progress-bar progress-bar-overcrowded" role="progressbar" style="width: 90%">
+                  Overcrowded
+                </div>
+              </div>
+
               <div class="next-tram">
 
                 <button class="btn btn-md btn-secondary" data-toggle="collapse"
@@ -80,7 +106,7 @@
                   <div class="row">
                     <div class="col-md-4 hidden-sm-down"></div>
                     <div class="col-md-2 col-sm-12"><a href="#" data-toggle="tooltip" title="Drunk People"
-                    class="btn btn-default btn-lg" role="button"><img src="./resources/img/beer.jpg" class="img-fluid" alt="Responsive image"><br/>DRUNK</a></div>
+                    class="btn btn-default btn-lg" role="button"><i class="fa fa-beer" aria-hidden="true"></i><br/>DRUNK</a></div>
                     <div class="col-md-2 col-sm-12"><a href="#" data-toggle="tooltip" title="Dirty"
                     class="btn btn-default btn-lg" role="button"><img src="./resources/img/trash.jpg" class="img-fluid" alt="Responsive image"><br/>DIRTY</a></div>
                     <div class="col-md-4 hidden-sm-down"></div>
@@ -109,6 +135,13 @@
                   <div class="upcoming-tram">
                     <P>Tram is arriving in: <strong>8 min</strong></P>
                   </div>
+
+									<div class="progress">
+		                <div aria-valuemax="60" aria-valuemin="0" aria-valuenow="40" class="progress-bar progress-bar-decent" role="progressbar" style="width: 40%">
+		                  Decent
+		                </div>
+		              </div>
+
 
                   <br/>
                 </div>
