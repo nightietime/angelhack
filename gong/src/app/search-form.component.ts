@@ -17,6 +17,28 @@ export class SearchFormComponent {
     return html;
   }
 
+  getClosestStop = () => {
+    var stops = STOPS['stops']
+
+    /* Hardcoded Coordinate for Dream Factory */
+    var lat = -37.808232;
+    var long = 144.905246;
+
+    
+    var sDist = -1;
+    var stop;
+    for (let s of stops) {
+      var dlat = lat - s['stop_latitude'];
+      var dlong = long -  s['stop_longitude'];
+      var nd = dlat*dlat + dlong*dlong;
+      if (sDist < 0 || nd < sDist) {
+        stop = s['stop_name'];
+        sDist = nd;
+      }
+    }
+    return stop;
+  }
+
   // onSubmit(): void {
   //   console.log(this.result);
   // }
