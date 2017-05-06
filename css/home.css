@@ -32,7 +32,7 @@ body {
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.1);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -114,7 +114,13 @@ body {
 
 .cover {
   padding: 0 1.5rem;
+  text-shadow: 1px 1px 4px black;
 }
+
+.cover-heading {
+  margin-bottom: 24px;
+}
+
 .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: bold;
@@ -146,7 +152,7 @@ body {
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, .45);
     background-size: cover;
     vertical-align: middle;
   }
