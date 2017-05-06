@@ -17,24 +17,86 @@
   <body>
 
     <!-- Static navbar with Login and SignUp -->
-      <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="../index.html">ANGELHACK</a>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">ANGELHACK</a>
+        </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="../home.html">HOME</a></li>
+              <li><a href="#">Report</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron" style="margin-top: -20px;">
+      <h1>122-Southern Cross Railway Station/Spencer St</h1>
+      <h3>Not Here? <button type="button" class="btn btn-warning btn-md">Change!</button></h3>
+
+    </div>
+
+    <div class="container-fluid">
+      <H1>TRAM REPORT</H1>
+      <div class="row">
+
+        <div class="col-xs-3 hidden-lg-down">
+        </div>
+
+        <div class="col-sm-9 col-xs-12">
+
+          <!-- TRAM REPORT -->
+          <div class="wrapper">
+
+            <!-- nearest-stop -->
+            <div class="container section">
+          		<div class="row">
+          			<div class="col-md-4 col-sm-6 col-xs-12">
+          				<img src="./resources/img/96_hero.JPG" class="img-responsive" />
+          			</div>
+          			<div class="col-sm-8 col-sm-6 col-xs-12">
+                  <H2>NEAREST STOP</H2>
+          				<H3>Southern Cross Railway Station/Spencer St</H3>
+                  <P>Your tram is arriving in: <strong>15 min</strong></P>
+          				<button type="button" class="btn btn-danger btn-sm">Not Here?</button>
+          				<button type="button" class="btn btn-warning btn-sm">Change!</button>
+          			</div>
+          		</div>
+          	</div>
+
+            <div class="row"><br/></div>
+
+            <!-- approaching-stop -->
+            <div class="container section">
+          		<div class="row">
+          			<div class="col-sm-4 col-xs-12">
+          				<img src="./resources/img/96_hero.JPG" class="img-responsive" />
+          			</div>
+          			<div class="col-sm-8 col-xs-12">
+                  <H2>APPROACHING TRAIN</H2>
+          				<H3>Southern Cross Railway Station/Spencer St</H3>
+                  <P>Your tram is arriving in: <strong>15 min</strong></P>
+          				<button type="button" class="btn btn-danger btn-sm">Not Here?</button>
+          				<button type="button" class="btn btn-success btn-sm">Change!</button>
+          			</div>
+          		</div>
+          	</div>
+
           </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li><a href="../home.html">HOME</a></li>
-                <li><a href="#">Report</a></li>
-              </ul>
-          </div>
-        </nav>
+
+        </div>
+
+      </div>
+
+    </div>
 
    <!-- Include Javascript and Jquery -->
    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
