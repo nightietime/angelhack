@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 // Route
 app.get("/", function(req, res) {
-	res.send("Hello world");
+	res.send("<h1>Hello world</h1>");
 });
 
 // Listen and serve web app
