@@ -30,7 +30,7 @@ var Schema = mongoose.Schema;
 
 var crowdednessSchema = new Schema({
   runID: String,
-  stopID: String, 
+  stopID: String,
   crowdednessLevel: String
 });
 
@@ -130,6 +130,6 @@ app.get("/", function(req, res) {
 });
 
 // Listen and serve web app
-app.listen(3000, "localhost", function(req, res) {
+app.listen(3000, function(req, res) {
 	console.log("Server has started..");
 });
