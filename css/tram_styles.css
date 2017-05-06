@@ -1,0 +1,158 @@
+.empty {
+  background-color: #F0FFF5;
+}
+
+.decent {
+  background-color: #E3F1E8;
+}
+
+.full {
+  background-color: #d89c82;
+}
+
+.overcrowded {
+  background-color: #FFE4E4;
+
+}
+
+.disruption {
+  background-color: #F1D628;
+}
+
+@media (max-width: 767px) {
+  .button-loc {
+    height: inherit;
+  }
+}
+
+.route_number_box {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-right: 20px;
+	color: black;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18pt;
+	border-radius: 5px;
+	max-width: 100px;
+}
+
+.route_label {
+	color: #000;
+	font-weight: bold;
+	font-size: 16pt;
+}
+
+.route_1 {
+	background-color: #b6c527;
+}
+
+.route_3_3a {
+	background-color: #89d1ef;
+}
+
+.route_5 {
+	background-color: #e04138;
+	color: white;
+}
+
+.route_6 {
+	background-color: #004c6d;
+	color: white;
+}
+
+.route_11 {
+	background-color: #85c5a2;
+}
+
+.route_12 {
+	background-color: #008896;
+	color: white;
+}
+
+.route_16 {
+	background-color: #ffda66;
+}
+
+.route_19 {
+	background-color: #8e4b79;
+	color: white;
+}
+
+.route_30 {
+	background-color: #4f4a9f;
+	color: white;
+}
+
+.route_35 {
+	background-color: #713c1f;
+	color: white;
+}
+
+.route_48 {
+	background-color: #434244;
+	color: white;
+}
+
+.route_57 {
+	background-color: #33bdca;
+	color: white;
+}
+
+.route_58 {
+	background-color: #83898e;
+	color: white;
+}
+
+.route_59 {
+	background-color: #4a815a;
+	color: white;
+}
+
+.route_64 {
+	background-color: #4a815a;
+	color: white;
+}
+
+.route_67 {
+	background-color: #ac7963;
+	color: white;
+}
+
+.route_70 {
+	background-color: #f38bb9;
+}
+
+.route_72 {
+	background-color: #9fb5a5;
+}
+
+.route_75 {
+	background-color: #009fdb;
+	color: white;
+}
+
+.route_78 {
+	background-color: #897bb9;
+	color: white;
+}
+
+.route_82 {
+	background-color: #bdd739;
+}
+
+.route_86 {
+	background-color: #feba12;
+}
+
+.route_96 {
+	background-color: #e33686;
+	color: white;
+}
+
+.route_109 {
+	background-color: #f58022;
+	color: white;
+}
