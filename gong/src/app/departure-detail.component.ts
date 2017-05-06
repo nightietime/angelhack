@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { TramService } from './tram.service';
+import { Http, Response } from "@angular/http";
 
 @Component({
   selector: 'departure-detail',
@@ -11,13 +13,16 @@ export class DepartureDetailComponent {
   @Input() routes: any;
   @Input() runs: any;
   @Input() groupedDepts: any;
+  @Input() stopNo: any;
+
+   constructor(private tramService: TramService, private http: Http) {}
 
   // Data needed for post
   data: any = {};
   // Method used for crowdedness post
-  onInputData(stop_id: any, run_id: any, crowdedness: any, dirtyLevel, speedingLevel) {
-    this.data.stop_id = stop_id;
-    this.data.run_id = run_id;
+  onInputData(crowdedness: any, dirtyLevel: any, speedingLevel: any) {
+    this.data.stop_id = this.stopNo;
+    this.data.run_id = this.runs;
     this.data.crowdedness = crowdedness;
     this.data.dirtyLevel = dirtyLevel;
     this.data.speedingLevel = speedingLevel;
