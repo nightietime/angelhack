@@ -29,10 +29,11 @@ html,body {height: 100%;}
     text-transform:uppercase;
     margin-top: 12%;
     font-family:"Oswald";
-    font-size: 5em;
+    font-size: 5.5em;
 }
 
 .jumbotron p {
+    margin-top: 50px;
     font-size:18px;
     font-family:"Lato";
 }
