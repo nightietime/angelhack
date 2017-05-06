@@ -10,11 +10,27 @@ import { DeparturesService } from './departures.service';
 
 @Component({
   selector: 'my-departures',
-  template: `DEPARTURES`
+  template: `
+
+  <departure-detail
+      [departures]="departures"
+      [directions]="directions"
+      [disruptions]="disruptions"
+      [routes]="routes"
+      [runs]="runs">
+
+  </departure-detail>
+
+  `
 })
 export class DeparturesComponent implements OnInit {
   stopId: string;
   data: any;
+  departures: any;
+  directions: any;
+  disruptions: any;
+  routes: any;
+  runs: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -33,6 +49,11 @@ export class DeparturesComponent implements OnInit {
   updateDeparturesData(data: any): void {
     console.log(data);
     this.data = data;
+    this.departures = data.ptvData.departures;
+    this.directions = data.ptvData.directions;
+    this.disruptions = data.ptvData.disruptions;
+    this.routes = data.ptvData.routes;
+    this.runs = data.ptvData.runs;
   }
 
   getDeparturesData(): void {

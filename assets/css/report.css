@@ -33,6 +33,33 @@
   margin-bottom: 0;
 }
 
+/* Progress bar */
+.progress-bar {
+  background-image: url();
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff286090', GradientType=0);
+  background-repeat: no-repeat;
+}
+
+.progress-bar-empty {
+  background-color: #b8efca !important;
+}
+
+.progress-bar-decent {
+  background-color: #22c958;
+}
+
+.progress-bar-full {
+  background-color: #9b5030;
+}
+
+.progress-bar-overcrowded {
+  background-color: #f23737;
+}
+
+.progress-bar-disruption {
+  background-color: #F1D628;
+}
+
 .route-no {
   font-size: 40px;
   text-align: center;
