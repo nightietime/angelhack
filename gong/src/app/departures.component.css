@@ -1,3 +1,16 @@
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+}
+
+body {
+  color: #000;
+  text-align: left;
+  text-shadow: none;
+}
+
+
 .jumbotron {
   background-image: url("../resources/img/96_hero.JPG");
   min-height: 200px;

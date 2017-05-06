@@ -12,6 +12,7 @@ import { DeparturesService } from './departures.service';
   selector: 'my-departures',
   templateUrl: './departures.component.html',
   styleUrls: ['./departures.component.css', './tram-styles.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class DeparturesComponent implements OnInit {
   stopId: string;

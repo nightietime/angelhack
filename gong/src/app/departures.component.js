@@ -62,6 +62,7 @@ DeparturesComponent = __decorate([
         selector: 'my-departures',
         templateUrl: './departures.component.html',
         styleUrls: ['./departures.component.css', './tram-styles.css'],
+        encapsulation: core_1.ViewEncapsulation.None
     }),
     __metadata("design:paramtypes", [router_1.ActivatedRoute,
         common_1.Location,
