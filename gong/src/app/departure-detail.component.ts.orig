@@ -128,6 +128,8 @@ export class DepartureDetailComponent {
 
    constructor(private tramService: TramService, private http: Http) {}
 
+<<<<<<< HEAD
+=======
   // Data needed for post
   data: any = {};
   // Method used for crowdedness post
@@ -142,6 +144,7 @@ export class DepartureDetailComponent {
     this.tramService.storeTrams(this.data).subscribe((response) => console.log(response), (error) => console.log(error));
   }
 
+>>>>>>> 044878bc6f85d92adc7adaad197149e3facaf386
   getKeys(obj: any): any {
     if (obj) {
       console.log(Object.keys(obj));

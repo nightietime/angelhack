@@ -43,14 +43,14 @@
                 <br/>
 
                 <div class="row">
-                  <a href="#" data-toggle="tooltip" title="Drunk People"
-                  class="btn btn-warning btn-md" role="button"><i class="fa fa-beer" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>DRUNK</a>
-                  <a href="#" data-toggle="tooltip" title="Dirty"
-                  class="btn btn-warning btn-md" role="button"><i class="fa fa-trash" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>DIRTY</a>
-                  <a href="#" data-toggle="tooltip" title="Unruly Driver"
-                  class="btn btn-warning btn-md" role="button"><i class="fa fa-fast-forward" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>SPEEDING</a>
-                  <a href="#" data-toggle="tooltip" title="Other Information"
-                  class="btn btn-warning btn-md" role="button"><i class="fa fa-info-circle" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>OTHERS</a>
+                  <button (click)="onInputData(0, 1, 0)" (click)="onSubmit()"type="submit" data-toggle="tooltip" title="Drunk People"
+                  class="btn btn-warning btn-md" role="button"><i class="fa fa-beer" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>DRUNK</button>
+                  <button (click)="onInputData(0, 1, 0)" (click)="onSubmit()" type="submit"  data-toggle="tooltip" title="Dirty"
+                  class="btn btn-warning btn-md" role="button"><i class="fa fa-trash" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>DIRTY</button>
+                  <button (click)="onInputData(0, 0, 1)" (click)="onSubmit()" type="submit" data-toggle="tooltip" title="Unruly Driver"
+                  class="btn btn-warning btn-md" role="button"><i class="fa fa-fast-forward" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>SPEEDING</button>
+                  <button (click)="onInputData(0, 0, 1)" (click)="onSubmit()" type="submit" data-toggle="tooltip" title="Other Information"
+                  class="btn btn-warning btn-md" role="button"><i class="fa fa-info-circle" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>OTHERS</button>
                 </div>
 
                 <br/>
@@ -86,10 +86,10 @@
 
                   <div class="row">
                     <form method="POST" action="/nextram" class="col-xs-10 col-xs-offset-1">
-                      <button class="btn btn-default btn-lg clear_5px_top" type="submit" name="crowdedness" value="0">Empty</button>
-                      <button name="crowdedness" value="1" class="btn btn-success btn-lg clear_5px_top" type="submit">Decent</button>
-                      <button name="crowdedness" value="2" class="btn btn-warning btn-lg clear_5px_top" type="button">Full</button>
-                      <button class="btn btn-danger btn-lg clear_5px_top" name="crowdedness" value="2" type="submit">Overcrowded</button>
+                      <button (click)="onInputData(0, 0, 0)" (click)="onSubmit()" class="btn btn-default btn-lg clear_5px_top" type="submit" name="crowdedness" value="0">Empty</button>
+                      <button (click)="onInputData(1, 0, 0)" (click)="onSubmit()" name="crowdedness" value="1" class="btn btn-success btn-lg clear_5px_top" type="submit">Decent</button>
+                      <button (click)="onInputData(2, 0, 0)" (click)="onSubmit()" name="crowdedness" value="2" class="btn btn-warning btn-lg clear_5px_top" type="button">Full</button>
+                      <button (click)="onInputData(3, 0, 0)" (click)="onSubmit()" class="btn btn-danger btn-lg clear_5px_top" name="crowdedness" value="3" type="submit">Overcrowded</button>
                     </form>
                   </div>
                   
