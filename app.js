@@ -124,11 +124,6 @@ app.get("/departures", cors(), function(req, res) {
     }
 });
 
-// Route
-app.get("/", function(req, res) {
-	res.send("<h1>Hello world</h1>");
-});
-
 // Listen and serve web app
 app.listen(3000, function(req, res) {
 	console.log("Server has started..");
