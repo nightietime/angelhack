@@ -9,6 +9,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static("assets"));
+app.use(cors());
 
 /****************************PTV***********************************/
 /* PTV, trams */
@@ -57,7 +58,7 @@ var groupByRouteDirectionID = function(ptvData) {
 }
 
 // GET request. params - stopid: int
-app.get("/departures", cors(), function(req, res) {
+app.get("/departures", function(req, res) {
     var callback = function(error, response, body) {
         // Check status and error reporting before processing JSON
         if (!error && response.statusCode == 200) {
@@ -146,7 +147,7 @@ app.get("/departures", cors(), function(req, res) {
 });
 
 // Information gather from nextram page
-app.post("/tramdb", cors(), function(req, res) {
+app.post("/tramdb", function(req, res) {
     var crowdedness = req.body.crowdedness;
     var runId = req.body.run_id;
     var stopId = req.body.stop_id;
