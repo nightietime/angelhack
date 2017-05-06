@@ -2,7 +2,9 @@ body > my-departures > departure-detail > div > div > div > div {
   max-width: 800px;
   margin:auto;
 }
+
 body {
+  background:white;
   color: #000;
   text-align: left;
   text-shadow: none;

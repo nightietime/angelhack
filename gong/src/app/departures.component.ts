@@ -41,7 +41,7 @@ export class DeparturesComponent implements OnInit {
   }
 
   updateDeparturesData(data: any): void {
-    console.log(data);
+    // console.log(data);
     this.data = data;
     var stopName = data.ptvData.stops[+this.stopId].stop_name;
 

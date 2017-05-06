@@ -29,7 +29,7 @@ var DeparturesComponent = (function () {
         });
     };
     DeparturesComponent.prototype.updateDeparturesData = function (data) {
-        console.log(data);
+        // console.log(data);
         this.data = data;
         var stopName = data.ptvData.stops[+this.stopId].stop_name;
         /* get the stop name and stop no */
