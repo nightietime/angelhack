@@ -1,6 +1,6 @@
 .jumbotron {
-  background-image: url("../resources/img/96_hero.JPG");
-  min-height: 200px;
+  background-image: url("../../resources/img/96_hero.JPG");
+  min-height: 160px;
   padding: 0px;
   background-size: cover;
   background-position: center;
@@ -8,12 +8,15 @@
 }
 
 .cover-container {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
   background-color: rgba(0, 0, 0, 0.5);
   background-size: cover;
   min-width: 100%;
-  min-height: 200px;
+  min-height: 160px;
 }
 
 .jumbotron h1 {
@@ -96,6 +99,7 @@
 
 .current-tram {
   padding: 10px;
+  padding-top: 20px !important;
   margin-top: 10px;
   text-align: center;
   background-color: #FFFF9D;
