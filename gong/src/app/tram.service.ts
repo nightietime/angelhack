@@ -10,7 +10,7 @@ export class TramService {
 	// Method that will be used to store tram data
 	storeTrams(data: any) {
 		console.log(data);
-		return this.http.post("/tramdb", data);
+		return this.http.post("http://104.155.227.151:3000/tramdb", data);
 	}
 
 }

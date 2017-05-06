@@ -29,6 +29,38 @@ var DepartureDetailComponent = (function () {
     DepartureDetailComponent.prototype.onSubmit = function () {
         this.tramService.storeTrams(this.data).subscribe(function (response) { return console.log(response); }, function (error) { return console.log(error); });
     };
+    DepartureDetailComponent.prototype.minsToNow = function (dateTimeString) {
+        var date = new Date(dateTimeString);
+        var time = date.getTime() - new Date().getTime();
+        var mins = Math.round(time / 1000 / 60); // milliseconds -> seconds -> minutes
+        var ret = "in ";
+        if (mins <= 0) {
+            ret = "Now";
+        }
+        else if (mins == 1) {
+            ret += mins + " min";
+        }
+        else if (mins < 60) {
+            ret += mins + " mins";
+        }
+        else if (mins % 60 == 1) {
+            if (Math.round(mins / 60) == 1) {
+                ret += Math.round(mins / 60) + " hour " + mins % 60 + " min";
+            }
+            else {
+                ret += Math.round(mins / 60) + " hours " + mins % 60 + " min";
+            }
+        }
+        else {
+            if (Math.round(mins / 60) == 1) {
+                ret += Math.round(mins / 60) + " hour " + mins % 60 + " mins";
+            }
+            else {
+                ret += Math.round(mins / 60) + " hours " + mins % 60 + " mins";
+            }
+        }
+        return ret;
+    };
     DepartureDetailComponent.prototype.getKeys = function (obj) {
         if (obj) {
             console.log(Object.keys(obj));
