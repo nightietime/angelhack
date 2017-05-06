@@ -1,0 +1,26 @@
+.jumbotron {
+  background-image: url("../resources/img/96_hero.JPG");
+  min-height: 200px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+.jumbotron h1 {
+  font-family: 'Oswald', sans-serif;
+  font-style: bold;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.jumbotron h3 {
+  font-family: 'Oswald', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 0;
+}
