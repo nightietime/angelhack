@@ -21,7 +21,7 @@ var DepartureDetailComponent = (function () {
     // Method used for crowdedness post
     DepartureDetailComponent.prototype.onInputData = function (crowdedness, dirtyLevel, speedingLevel, run_id) {
         this.data.stop_id = this.stopNo;
-        this.data.run_id = any;
+        this.data.run_id = run_id;
         this.data.crowdedness = crowdedness;
         this.data.dirtyLevel = dirtyLevel;
         this.data.speedingLevel = speedingLevel;
