@@ -31,7 +31,9 @@ var Schema = mongoose.Schema;
 var crowdednessSchema = new Schema({
   runID: String,
   stopID: String,
-  crowdednessLevel: String
+  crowdednessLevel: String,
+  dirtyLevel: String,
+  SpeedingLevel: String
 });
 
 var Crowdedness = mongoose.model("crowdedness", crowdednessSchema);
@@ -71,11 +73,13 @@ app.get("/departures", cors(), function(req, res) {
                     // Compare based on run_id
                     // Create key if not exist in runCrowdedness object
                     if (!(result[i].runID in runCrowdedness)) {
-                        runCrowdedness[result[i].runID] = {crowdedness: Number(result[i].crowdednessLevel), count: 1, average: 0};
+                        runCrowdedness[result[i].runID] = {crowdedness: Number(result[i].crowdednessLevel), count: 1, average: 0, dirtyLevel: 1, speedingLevel: 1};
                     }
                     // Else increment crowdedness level and count
                     else {
                         runCrowdedness[result[i].runID].crowdedness += Number(result[i].crowdednessLevel);
+                        runCrowdedness[result[i].runID].dirtyLevel++;
+                        runCrowdedness[result[i].runID].speedingLevel++;
                         runCrowdedness[result[i].runID].count++;
                     }
                 }
