@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+
 import { STOPS } from './stops';
 
 @Component({
   selector: 'search-form',
   templateUrl: './search-form.component.html',
-  styleUrls: ['./search-form.component.css']
+  styleUrls: ['./search-form.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class SearchFormComponent {
   autocomplete: any[] = STOPS['stops'];
@@ -15,9 +17,9 @@ export class SearchFormComponent {
     return html;
   }
 
-  onSubmit = function() {
-    console.log(this.result);
-  }
+  // onSubmit(): void {
+  //   console.log(this.result);
+  // }
 
   // valueFormattter = (data: any) => {
   //   let html = `${data.stop_name}`;
