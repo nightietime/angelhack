@@ -28,8 +28,42 @@ export class DepartureDetailComponent {
     this.data.dirtyLevel = dirtyLevel;
     this.data.speedingLevel = speedingLevel;
   }
+
   onSubmit() {
     this.tramService.storeTrams(this.data).subscribe((response) => console.log(response), (error) => console.log(error));
+  }
+
+  minsToNow(dateTimeString: string): string {
+    var date = new Date(dateTimeString);
+    var time = date.getTime() - new Date().getTime();
+    var mins = Math.round(time/1000/60);  // milliseconds -> seconds -> minutes
+
+    var ret = "in ";
+    if (mins <= 0) {
+      ret = "Now";
+    }
+    else if (mins == 1) {
+      ret += mins + " min";
+    }
+    else if (mins < 60) {
+      ret += mins + " mins";
+    }
+    else if (mins%60 == 1) {
+      if (Math.round(mins/60) == 1) {
+        ret += Math.round(mins/60) + " hour " + mins%60 + " min";
+      } else {
+        ret += Math.round(mins/60) + " hours " + mins%60 + " min";
+      }
+    }
+    else {
+      if (Math.round(mins/60) == 1) {
+        ret += Math.round(mins/60) + " hour " + mins%60 + " mins";
+      } else {
+        ret += Math.round(mins/60) + " hours " + mins%60 + " mins";
+      }
+    }
+
+    return ret;
   }
 
   getKeys(obj: any): any {
