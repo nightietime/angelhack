@@ -23,7 +23,7 @@ export class DepartureDetailComponent {
   // Method used for crowdedness post
   onInputData(crowdedness: any, dirtyLevel: any, speedingLevel: any, run_id: any) {
     this.data.stop_id = this.stopNo;
-    this.data.run_id = any;
+    this.data.run_id = run_id;
     this.data.crowdedness = crowdedness;
     this.data.dirtyLevel = dirtyLevel;
     this.data.speedingLevel = speedingLevel;
