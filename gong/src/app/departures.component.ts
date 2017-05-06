@@ -18,6 +18,7 @@ export class DeparturesComponent implements OnInit {
   stopName: any;
   stopNo: any;
   data: any;
+  groupedDepts: any;
   departures: any;
   directions: any;
   disruptions: any;
@@ -42,6 +43,8 @@ export class DeparturesComponent implements OnInit {
     console.log(data);
     this.data = data;
     var stopName = data.ptvData.stops[+this.stopId].stop_name;
+
+    /* get the stop name and stop no */
     var re = '\\d+$';
     var matches = stopName.match(re);
     if (matches) {
@@ -52,6 +55,8 @@ export class DeparturesComponent implements OnInit {
     else {
       this.stopName = stopName;
     }
+
+    this.groupedDepts = data.groupedDepts;
     this.departures = data.ptvData.departures;
     this.directions = data.ptvData.directions;
     this.disruptions = data.ptvData.disruptions;
