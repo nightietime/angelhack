@@ -12,12 +12,12 @@
 
             <div class="current-tram">
               <div class="route-no">
-                <span class="route_number_table route_number_96">96</span>
-                <strong>St. Kilda Beach</strong>
+                <span class="{{'route_number_table route_number_' + routes[departure.route_id].route_number}}">{{routes[departure.route_id].route_number}}</span>
+                <strong>{{ directions[departure.direction_id].direction_name }}</strong>
               </div>
 
               <div class="upcoming-tram">
-                <P>Arriving in:</P>
+                <p>Arriving in</p>
                 <h1>5 min</h1>
               </div>
 
@@ -92,7 +92,7 @@
                       <button (click)="onInputData(3, 0, 0)" (click)="onSubmit()" class="btn btn-danger btn-lg clear_5px_top" name="crowdedness" value="3" type="submit">Overcrowded</button>
                     </form>
                   </div>
-                  
+
                 </div>
               </div>
 
