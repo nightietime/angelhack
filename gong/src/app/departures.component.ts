@@ -64,6 +64,27 @@ export class DeparturesComponent implements OnInit {
       this.stopName = stopName;
     }
 
+    /* sort groupedDepts */
+    // add actual route numbers
+    for (let key in data.groupedDepts) {
+      for (let i=0; i<data.groupedDepts[key].length; i++) {
+        data.groupedDepts[key][i].route_no = data.ptvData.routes[data.groupedDepts[key][i].route_id].route_number;
+      }
+    }
+
+    console.log(data.groupedDepts);
+
+    var ordered = {};
+    Object.keys(data.groupedDepts).sort(function(a, b) {
+        return parseInt(data.groupedDepts[a][0].route_no) - parseInt(data.groupedDepts[b][0].route_no);
+      }).forEach((key) => ordered[key] = data.groupedDepts[key]);
+
+    data.groupedDepts = ordered;
+
+    // data.groupedDepts.sort(function(a: any, b: any) {
+    //
+    // })
+
     this.groupedDepts = data.groupedDepts;
     this.departures = data.ptvData.departures;
     this.directions = data.ptvData.directions;
