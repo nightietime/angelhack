@@ -146,7 +146,7 @@ app.get("/departures", cors(), function(req, res) {
 });
 
 // Information gather from nextram page
-app.post("/tramdb", function(req, res) {
+app.post("/tramdb", cors(), function(req, res) {
     var crowdedness = req.body.crowdedness;
     var runId = req.body.run_id;
     var stopId = req.body.stop_id;
