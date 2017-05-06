@@ -43,7 +43,8 @@
     <div class="jumbotron" style="margin-top: -20px;">
       <div class="cover-container">
         <h1>122-Southern Cross Railway Station/Spencer St</h1>
-        <h3>Not Here? <button type="button" class="btn btn-warning btn-md">Change!</button></h3>
+
+        <h3>Not Here?  <a href="./home.html" class="btn btn-warning btn-md" role="button">Change!</a></h3>
       </div>
     </div>
 
@@ -100,28 +101,25 @@
 
                 <button class="btn btn-md btn-secondary" data-toggle="collapse"
                 data-target="#next-tram">Next Tram</button>
+								<button class="btn btn-md btn-secondary" data-toggle="collapse"
+								data-target="#report-crowdedness">Report Crowdedness</button>
                 <button class="btn btn-md btn-secondary" data-toggle="collapse"
-                data-target="#report">Report</button>
+								data-target="#report-condition">Report Condition</button>
 
-                <div id="report" class="collapse">
+
+
+                <div id="report-condition" class="collapse">
                   <br/>
 
                   <div class="row">
-                    <div class="col-md-4 hidden-sm-down"></div>
-                    <div class="col-md-2 col-sm-12"><a href="#" data-toggle="tooltip" title="Drunk People"
-                    class="btn btn-default btn-lg" role="button"><i class="fa fa-beer" aria-hidden="true" style="font-size:75px;color:#FFB03B;"></i><br/>DRUNK</a></div>
-                    <div class="col-md-2 col-sm-12"><a href="#" data-toggle="tooltip" title="Dirty"
-                    class="btn btn-default btn-lg" role="button"><i class="fa fa-trash" aria-hidden="true" style="font-size:75px;color:#B64926;"></i><br/>DIRTY</a></div>
-                    <div class="col-md-4 hidden-sm-down"></div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-4 hidden-sm-down"></div>
-                    <div class="col-md-2 col-sm-12"><a href="#" data-toggle="tooltip" title="Unruly Driver"
-                    class="btn btn-default btn-lg" role="button"><i class="fa fa-fast-forward" aria-hidden="true" style="font-size:75px;color:#468966;"></i><br/>SPEEDING</a></div>
-                    <div class="col-md-2 col-sm-12"><a href="#" data-toggle="tooltip" title="Other Information"
-                    class="btn btn-default btn-lg" role="button"><i class="fa fa-info-circle" aria-hidden="true" style="font-size:75px;color:#8E2800;"></i><br/>OTHERS</a></div>
-                    <div class="col-md-4 hidden-sm-down"></div>
+                    <a href="#" data-toggle="tooltip" title="Drunk People"
+                    class="btn btn-warning btn-md" role="button"><i class="fa fa-beer" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>DRUNK</a>
+                    <a href="#" data-toggle="tooltip" title="Dirty"
+                    class="btn btn-warning btn-md" role="button"><i class="fa fa-trash" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>DIRTY</a>
+                    <a href="#" data-toggle="tooltip" title="Unruly Driver"
+                    class="btn btn-warning btn-md" role="button"><i class="fa fa-fast-forward" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>SPEEDING</a>
+                    <a href="#" data-toggle="tooltip" title="Other Information"
+                    class="btn btn-warning btn-md" role="button"><i class="fa fa-info-circle" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>OTHERS</a>
                   </div>
 
                   <br/>
@@ -146,11 +144,21 @@
 		                </div>
 		              </div>
 
-
                   <br/>
                 </div>
 
-              </div>
+								<div id="report-crowdedness" class="collapse">
+									<div class="well">
+	                  <div class="row">
+	                    <h5>Please rate the tram crowdedness</h5>
+	                  </div>
+
+	                  <div class="row">
+	                    <form method="POST" action="/nextram" class="col-xs-10 col-xs-offset-1">
+	                      <button class="btn btn-default btn-lg clear_5px_top" type="submit" name="crowdedness" value="0">Empty</button> <button name="crowdedness" value="1" class="btn btn-success btn-lg clear_5px_top" type="submit">Decent</button> <button name="crowdedness" value="2" class="btn btn-warning btn-lg clear_5px_top" type="button">Full</button> <button class="btn btn-danger btn-lg clear_5px_top" name="crowdedness" value="2" type="submit">Overcrowded</button>
+	                    </div>
+	                </div>
+              	</div>
 
             </div>
           </div>
