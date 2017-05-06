@@ -7,12 +7,13 @@ import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 import { AppComponent }  from './app.component';
 import { SearchFormComponent } from './search-form.component';
 import { DeparturesComponent } from './departures.component';
+import { DepartureDetailComponent } from './departure-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DeparturesService } from './departures.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, NguiAutoCompleteModule, AppRoutingModule, HttpModule ],
-  declarations: [ AppComponent, SearchFormComponent, DeparturesComponent ],
+  declarations: [ AppComponent, SearchFormComponent, DeparturesComponent, DepartureDetailComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ DeparturesService ]
 })

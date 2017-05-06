@@ -33,7 +33,7 @@ var crowdednessSchema = new Schema({
   stopID: String,
   crowdednessLevel: String,
   dirtyLevel: String,
-  SpeedingLevel: String
+  speedingLevel: String
 });
 
 var Crowdedness = mongoose.model("crowdedness", crowdednessSchema);
@@ -102,6 +102,23 @@ app.get("/departures", cors(), function(req, res) {
                     }
                 }
 
+                // Check how many people rated dirty
+                for (var run in runCrowdedness) {
+                    if (runCrowdedness[run].dirtyLevel > 10) {
+                        runCrowdedness[run].dirtyLevel = true;
+                    }
+                    else {
+                        runCrowdedness[run].dirtyLevel = false;
+                    }
+
+                    if (runCrowdedness[run].speedingLevel > 10) {
+                        runCrowdedness[run].speedingLevel = true;
+                    }
+                    else {
+                        runCrowdedness[run].speedingLevel = false;
+                    }
+                }
+
                 // Send back the result in json format
                 if (body) {
                     var toSend = {
@@ -126,6 +143,26 @@ app.get("/departures", cors(), function(req, res) {
        var stopID = req.query.stopid;
        ptv.departures(stopID, callback); // sample stopID: 2504
     }
+});
+
+// Information gather from nextram page
+app.post("/tramdb", function(req, res) {
+    var crowdedness = req.body.crowdedness;
+    var runId = req.body.run_id;
+    var stopId = req.body.stop_id;
+    var dirtyLevel = req.body.dirtyLevel;
+    var speedingLevel = req.body.speedingLevel;
+    var userInput = {"runID": runId, "stopID": stopId, "crowdednessLevel": crowdedness, "dirtyLevel": dirtyLevel, "speedingLevel": speedingLevel};
+    Database.Crowdedness.create(userInput, function(err, object) {
+        if (err) {
+            console.log("Error");
+        }
+        else {
+            console.log("Insertion success" + object);
+            // res.json({"status": "success"});
+            // res.redirect("/departures/" + stopId);
+        }
+    });
 });
 
 // Listen and serve web app
