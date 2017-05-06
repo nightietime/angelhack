@@ -33,11 +33,11 @@ export class SearchFormComponent {
       var dlong = long -  s['stop_longitude'];
       var nd = dlat*dlat + dlong*dlong;
       if (sDist < 0 || nd < sDist) {
-        stop1 = s['stop_name'];
+        stop1 = s;
         sDist = nd;
       }
     }
-     this.result = s;
+     this.result = stop1;
   }
 
   ngOnInit(): void {
