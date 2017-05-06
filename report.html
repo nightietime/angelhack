@@ -39,41 +39,88 @@
 
     <!-- Jumbotron -->
     <div class="jumbotron" style="margin-top: -20px;">
-      <h1>122-Southern Cross Railway Station/Spencer St</h1>
-      <h3>Not Here? <button type="button" class="btn btn-warning btn-md">Change!</button></h3>
-
+      <div class="cover-container">
+        <h1>122-Southern Cross Railway Station/Spencer St</h1>
+        <h3>Not Here? <button type="button" class="btn btn-warning btn-md">Change!</button></h3>
+      </div>
     </div>
 
-    <div class="container-fluid">
+    <!-- MAIN -->
+    <div class="main container-fluid">
 
       <div class="row">
-
-        <div class="col-xs-3 hidden-lg-down"></div>
-
-        <div class="col-sm-9 col-xs-12">
+        <div class="blank col-lg-3 hidden-md-down"></div>
+        <div class="right-section col-lg-9 col-xs-12">
 
           <!-- TRAM REPORT -->
           <div class="wrapper">
 
             <!-- approaching-train -->
             <div class="container section">
-          		<div class="row">
+              <div class="route-no">
+                <span class="route_number_table route_number_96">96</span>
+                <strong>St. Kilda Beach</strong>
+              </div>
 
-          			<H3></H3>
-                <P>Your tram is arriving in: <strong>15 min</strong></P>
+              <div class="upcoming-tram">
+                <P>Tram is arriving in:</P>
+                <h1>5 min</h1>
+              </div>
 
-          		</div>
-          	</div>
+              <div class="next-tram">
 
-            <div class="row"><br/></div>
+                <button class="btn btn-md btn-secondary" data-toggle="collapse"
+                data-target="#next-tram">Next Tram</button>
+                <button class="btn btn-md btn-secondary" data-toggle="collapse"
+                data-target="#report">Report</button>
 
+                <div id="report" class="collapse">
+                  <br/>
+
+                  <div class="row">
+                    <div class="col-md-4 hidden-sm-down"></div>
+                    <div class="col-md-2 col-sm-12"><a href="#" data-toggle="tooltip" title="Drunk People"
+                    class="btn btn-default btn-lg" role="button"><img src="./resources/img/beer.jpg" class="img-fluid" alt="Responsive image"><br/>DRUNK</a></div>
+                    <div class="col-md-2 col-sm-12"><a href="#" data-toggle="tooltip" title="Dirty"
+                    class="btn btn-default btn-lg" role="button"><img src="./resources/img/trash.jpg" class="img-fluid" alt="Responsive image"><br/>DIRTY</a></div>
+                    <div class="col-md-4 hidden-sm-down"></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4 hidden-sm-down"></div>
+                    <div class="col-md-2 col-sm-12"><a href="#" data-toggle="tooltip" title="Unruly Driver"
+                    class="btn btn-default btn-lg" role="button"><img src="./resources/img/speed_up.png" class="img-fluid" alt="Responsive image"><br/>SPEEDING</a></div>
+                    <div class="col-md-2 col-sm-12"><a href="#" data-toggle="tooltip" title="Other Information"
+                    class="btn btn-default btn-lg" role="button"><img src="./resources/img/info.jpg" class="img-fluid" alt="Responsive image"><br/>OTHERS</a></div>
+                    <div class="col-md-4 hidden-sm-down"></div>
+                  </div>
+
+                  <br/>
+                </div>
+
+                <div id="next-tram" class="collapse">
+                  <br/>
+
+                  <div class="route-no">
+                    <span class="route_number_table route_number_96">96</span>
+                    <strong>East Brunswick</strong>
+                  </div>
+
+                  <div class="upcoming-tram">
+                    <P>Tram is arriving in: <strong>8 min</strong></P>
+                  </div>
+
+                  <br/>
+                </div>
+
+              </div>
+
+            </div>
           </div>
 
-        </div>
-
-      </div>
-
-    </div>
+        </div> <!-- close row -->
+      <div class="row"><br/></div>
+    </div> <!-- close main -->
 
    <!-- Include Javascript and Jquery -->
    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
