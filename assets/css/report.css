@@ -113,7 +113,11 @@
 }
 
 .btn-warning {
-    margin: 20px;
+  margin:20px;
+}
+
+.clear_5px_top {
+  margin: 10px;
 }
 
 @media (min-width: 1200px) {
