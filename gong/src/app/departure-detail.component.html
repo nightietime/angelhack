@@ -66,28 +66,7 @@
               attr.data-target="{{'#report-condition-' + group[0].run_id}}">Report Condition</button>
 
 
-
-              <div id="{{'report-condition-' + group[0].run_id}}" class="collapse">
-                <br/>
-                <div class="row">
-                  <h5>Any inconveniences you experienced?</h5>
-                </div>
-
-                <div class="row"> <!-- buttons -->
-                  <button (click)="onInputData(0, 1, 0, group[0].run_id, group[0].stop_id)" (click)="onSubmit()"type="submit" data-toggle="tooltip" title="Drunk People"
-                  class="btn btn-warning btn-md" role="button"><i class="fa fa-beer" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>Drunk</button>
-                  <button (click)="onInputData(0, 1, 0, group[0].run_id, group[0].stop_id)" (click)="onSubmit()" type="submit"  data-toggle="tooltip" title="Dirty"
-                  class="btn btn-warning btn-md" role="button"><i class="fa fa-trash" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>Dirty</button>
-                  <button (click)="onInputData(0, 0, 1, group[0].run_id, group[0].stop_id)" (click)="onSubmit()" type="submit" data-toggle="tooltip" title="Unruly Driver"
-                  class="btn btn-warning btn-md" role="button"><i class="fa fa-fast-forward" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>Poor Driving</button>
-                  <button (click)="onInputData(0, 0, 1, group[0].run_id, group[0].stop_id)" (click)="onSubmit()" type="submit" data-toggle="tooltip" title="Other Information"
-                  class="btn btn-warning btn-md" role="button"><i class="fa fa-info-circle" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>Others</button>
-                </div>
-
-                <br/>
-              </div>
-
-              <div id="{{'next-tram-' + group[0].run_id}}" class="collapse">
+              <div id="{{'next-tram-' + group[0].run_id}}" class="collapse upcoming">
                 <div *ngFor="let departure of group; let i=index;">
                   <div *ngIf="i>0"> <!-- do not include first departure -->
                     <div class="upcoming-tram">
@@ -124,7 +103,26 @@
                 </div>
               </div>
 
-              <div id="{{'report-crowdedness-' + group[0].run_id}}" class="collapse">
+              <div id="{{'report-condition-' + group[0].run_id}}" class="collapse well inconveniences">
+                <br/>
+                <div class="row">
+                  <h5>Any inconveniences you might experience?</h5>
+                </div>
+
+                <div class="row"> <!-- buttons -->
+                  <button (click)="onInputData(0, 1, 0, group[0].run_id, group[0].stop_id)" (click)="onSubmit()"type="submit" data-toggle="tooltip" title="Drunk People"
+                  class="btn btn-warning btn-md" role="button"><i class="fa fa-beer" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>Drunk</button>
+                  <button (click)="onInputData(0, 1, 0, group[0].run_id, group[0].stop_id)" (click)="onSubmit()" type="submit"  data-toggle="tooltip" title="Dirty"
+                  class="btn btn-warning btn-md" role="button"><i class="fa fa-trash" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>Dirty</button>
+                  <button (click)="onInputData(0, 0, 1, group[0].run_id, group[0].stop_id)" (click)="onSubmit()" type="submit" data-toggle="tooltip" title="Unruly Driver"
+                  class="btn btn-warning btn-md" role="button"><i class="fa fa-fast-forward" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>Poor Driving</button>
+                  <button (click)="onInputData(0, 0, 1, group[0].run_id, group[0].stop_id)" (click)="onSubmit()" type="submit" data-toggle="tooltip" title="Other Information"
+                  class="btn btn-warning btn-md" role="button"><i class="fa fa-info-circle" aria-hidden="true" style="font-size:30px;color:white;"></i><br/>Others</button>
+                </div>
+
+              </div>
+
+              <div id="{{'report-crowdedness-' + group[0].run_id}}" class="collapse crowdedness">
                 <div class="well">
                   <div class="row">
                     <h5>How crowded is this tram?</h5>

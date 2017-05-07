@@ -1,3 +1,18 @@
+.crowdedness, .upcoming,  {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.inconveniences {
+  padding-top: 0px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+.well {
+  margin: 20px;
+}
+
 my-departures, departure-detail, div {
   max-width: 100%;
 }
