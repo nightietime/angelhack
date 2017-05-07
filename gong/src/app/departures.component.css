@@ -149,13 +149,13 @@ a.onlight {
   padding: 10px;
   margin-top: 10px;
   text-align: center;
-  background-color: #FFFF9D;
+  /*background-color: #FFFF9D;*/
 }
 
 .next-tram {
   padding: 10px;
   text-align: center;
-  background-color: #BEEB9F;
+  /*background-color: #BEEB9F;*/
 }
 
 .btn-default {

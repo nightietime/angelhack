@@ -1,3 +1,13 @@
+<div class="container">
+  <div class="row" *ngIf="success">
+      <div class="col-xs-1"></div>
+      <div class="alert alert-success col-xs-10 text-center" id="success">
+        <strong>Submission successful - thank you for your submission.</strong>
+      </div>
+      <div class="col-xs-1"></div>
+    </div>
+
+
  <div *ngFor="let group of getKeys(groupedDepts)">
     <div class="row">
 <!--       <div class="blank col-lg-3 hidden-md-down"></div> -->
@@ -12,11 +22,11 @@
             <div class="current-tram">
               <div class="route-no">
                 <span class="{{'route_number_table route_' + routes[group[0].route_id].route_number}}">{{routes[group[0].route_id].route_number}}</span>
-                <strong>{{ 'to ' + directions[group[0].direction_id].direction_name }}</strong>
+                <strong font-size="16dp">{{ 'to ' + directions[group[0].direction_id].direction_name }}</strong>
               </div>
 
               <div class="upcoming-tram">
-                <h1>{{ minsToNow(group[0].estimated_departure_utc) }}</h1>
+                <h3>{{ minsToNow(group[0].estimated_departure_utc) }}</h3>
               </div>
 
               <div class="progress">
@@ -78,7 +88,7 @@
                 <div *ngFor="let departure of group; let i=index;">
                   <div *ngIf="i>0"> <!-- do not include first departure -->
                     <div class="upcoming-tram">
-                      <h1>{{ minsToNow(departure.estimated_departure_utc) }}</h1>
+                      <h4>{{ minsToNow(departure.estimated_departure_utc) }}</h4>
                     </div>
 
                     <div class="progress">
@@ -136,4 +146,5 @@
 
     </div>
   </div>
+</div>
 </div>

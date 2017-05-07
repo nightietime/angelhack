@@ -17,17 +17,31 @@ export class DepartureDetailComponent {
   @Input() stopNo: any;
   @Input() crowdSourcedDisruptions: any;
 
+  activeButtonName: string;
+  collapsed: boolean = false;
+  success: boolean = false;
+
    constructor(private tramService: TramService, private http: Http) {}
 
   // Data needed for post
   data: any = {};
   // Method used for crowdedness post
+
+
+
   onInputData(crowdedness: any, dirtyLevel: any, speedingLevel: any, run_id: any, stop_id: any) {
     this.data.stop_id = stop_id;
     this.data.run_id = run_id;
     this.data.crowdedness = crowdedness;
     this.data.dirtyLevel = dirtyLevel;
     this.data.speedingLevel = speedingLevel;
+
+    function removeSuccess() {
+      this.success = false;
+    }
+
+    this.success = true;
+    setTimeout(removeSuccess, 3000);
   }
 
   onSubmit() {
@@ -91,4 +105,10 @@ export class DepartureDetailComponent {
     }
     return true;
   }
+
+  // closeAllOthers(name: string): void {
+  //   if (name == this.activeButtonName) { // close active panel
+  //
+  //   }
+  // }
 }
