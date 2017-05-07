@@ -1,6 +1,15 @@
+my-departures, departure-detail, div {
+  max-width: 100%;
+}
+
 body > my-departures > departure-detail > div > div > div > div {
   max-width: 800px;
   margin:auto;
+}
+
+.progress {
+  margin: auto;
+  max-width: 600px;
 }
 
 .white {
@@ -15,23 +24,23 @@ body > my-departures > departure-detail > div > div > div > div {
 }
 
 body > my-departures > departure-detail > div > div > div > div > div > div.current-tram > div.route-no > strong {
-  font-size: 31px;
+  font-size: 36px;
 }
 
 body > my-departures > departure-detail > div > div > div > div > div > div.current-tram > div.route-no > span {
-  font-size: 25px;
+  font-size: 24px;
 }
 
 body > my-departures > departure-detail > div > div > div > div > div > div.current-tram > div.upcoming-tram > h1 {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 #next-tram > div:nth-child(2) > div > div.upcoming-tram > h1, #next-tram > div:nth-child(3) > div > div.upcoming-tram > h1 {
-  font-size: 33px;
+  font-size: 24px;
 }
 
 p.expected {
-  font-size:14px;
+  font-size:24px;
 }
 
 p.disruption {
@@ -112,7 +121,7 @@ a.onlight {
 }
 
 .route-no {
-  font-size: 40px;
+  /*font-size: 40px;*/
   text-align: center;
   margin-bottom: 5px;
 }
@@ -126,13 +135,18 @@ a.onlight {
   box-sizing: border-box;
   margin-right: 10px;
   text-align: center;
-  font-size: 40px;
+  /*font-size: 40px;*/
+  font-size: 24px;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   /*color: #fff;*/
   /*border: 10px solid;*/
   background-color: #000;
 
+}
+
+strong {
+  font-size: 24px;
 }
 
 .route_number_96 {

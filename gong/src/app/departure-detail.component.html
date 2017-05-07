@@ -2,7 +2,7 @@
   <div class="row" *ngIf="success">
       <div class="col-xs-1"></div>
       <div class="alert alert-success col-xs-10 text-center" id="success">
-        <strong>Submission successful - thank you for your submission.</strong>
+        <b>Submission successful - thank you for your submission.</b>
       </div>
       <div class="col-xs-1"></div>
     </div>
@@ -69,6 +69,9 @@
 
               <div id="{{'report-condition-' + group[0].run_id}}" class="collapse">
                 <br/>
+                <div class="row">
+                  <h5>Any inconveniences you experienced?</h5>
+                </div>
 
                 <div class="row"> <!-- buttons -->
                   <button (click)="onInputData(0, 1, 0, group[0].run_id, group[0].stop_id)" (click)="onSubmit()"type="submit" data-toggle="tooltip" title="Drunk People"
@@ -93,7 +96,7 @@
 
                     <div class="progress">
                       <div aria-valuemax="60" aria-valuemin="0" aria-valuenow="40" class="progress-bar progress-bar-overcrowded" role="progressbar"
-                        [ngStyle]="{width: calculateWidth(departure.run_id)}">
+                      [ngStyle]="{width: calculateWidth(departure.run_id)}">
                         {{crowdSourcedDisruptions[departure.run_id]?.class}}
                       </div>
                     </div>
@@ -124,7 +127,7 @@
               <div id="{{'report-crowdedness-' + group[0].run_id}}" class="collapse">
                 <div class="well">
                   <div class="row">
-                    <h5>Please rate the tram crowdedness</h5>
+                    <h5>How crowded is this tram?</h5>
                   </div>
 
                   <div class="row">
@@ -146,5 +149,8 @@
 
     </div>
   </div>
+
+
+  <hr>
 </div>
 </div>
