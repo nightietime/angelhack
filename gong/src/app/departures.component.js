@@ -71,6 +71,7 @@ var DeparturesComponent = (function () {
         this.disruptions = data.ptvData.disruptions;
         this.routes = data.ptvData.routes;
         this.runs = data.ptvData.runs;
+        this.crowdSourcedDisruptions = data.crowdSourcedDisruptions;
     };
     DeparturesComponent.prototype.getDeparturesData = function () {
         var _this = this;

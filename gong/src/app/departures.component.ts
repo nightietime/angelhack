@@ -25,6 +25,7 @@ export class DeparturesComponent implements OnInit {
   disruptions: any;
   routes: any;
   runs: any;
+  crowdSourcedDisruptions: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -91,6 +92,7 @@ export class DeparturesComponent implements OnInit {
     this.disruptions = data.ptvData.disruptions;
     this.routes = data.ptvData.routes;
     this.runs = data.ptvData.runs;
+    this.crowdSourcedDisruptions = data.crowdSourcedDisruptions;
   }
 
   getDeparturesData(): void {

@@ -68,6 +68,15 @@ var DepartureDetailComponent = (function () {
                 .map(function (key) { return obj[key]; });
         }
     };
+    DepartureDetailComponent.prototype.calculateWidth = function (runId) {
+        console.log(runId);
+        if (this.crowdSourcedDisruptions[runId]) {
+            return this.crowdSourcedDisruptions[runId].average / 3 * 100 + '%';
+        }
+        else {
+            return "0%";
+        }
+    };
     return DepartureDetailComponent;
 }());
 __decorate([
@@ -98,6 +107,10 @@ __decorate([
     core_1.Input(),
     __metadata("design:type", Object)
 ], DepartureDetailComponent.prototype, "stopNo", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DepartureDetailComponent.prototype, "crowdSourcedDisruptions", void 0);
 DepartureDetailComponent = __decorate([
     core_1.Component({
         selector: 'departure-detail',

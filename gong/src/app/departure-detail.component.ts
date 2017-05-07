@@ -15,6 +15,7 @@ export class DepartureDetailComponent {
   @Input() runs: any;
   @Input() groupedDepts: any;
   @Input() stopNo: any;
+  @Input() crowdSourcedDisruptions: any;
 
    constructor(private tramService: TramService, private http: Http) {}
 
@@ -71,6 +72,15 @@ export class DepartureDetailComponent {
       console.log(Object.keys(obj));
       return Object.keys(obj)
         .map((key)=>{return obj[key]} );
+    }
+  }
+
+  calculateWidth(runId: any): string {
+    console.log(runId);
+    if (this.crowdSourcedDisruptions[runId]) {
+      return this.crowdSourcedDisruptions[runId].average/3*100 + '%';
+    } else {
+      return "0%";
     }
   }
 }
