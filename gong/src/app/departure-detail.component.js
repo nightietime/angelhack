@@ -62,6 +62,7 @@ var DepartureDetailComponent = (function () {
         return ret;
     };
     DepartureDetailComponent.prototype.getKeys = function (obj) {
+        console.log('disruptions', this.disruptions);
         if (obj) {
             console.log(Object.keys(obj));
             return Object.keys(obj)
@@ -76,6 +77,13 @@ var DepartureDetailComponent = (function () {
         else {
             return "0%";
         }
+    };
+    DepartureDetailComponent.prototype.checkIfEmptyJson = function (json) {
+        if (json) {
+            if (Object.keys(json).length == 0)
+                return false; // TODO: check for Date (length = 0)
+        }
+        return true;
     };
     return DepartureDetailComponent;
 }());

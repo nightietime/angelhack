@@ -68,6 +68,7 @@ export class DepartureDetailComponent {
   }
 
   getKeys(obj: any): any {
+    console.log('disruptions', this.disruptions);
     if (obj) {
       console.log(Object.keys(obj));
       return Object.keys(obj)
@@ -82,5 +83,12 @@ export class DepartureDetailComponent {
     } else {
       return "0%";
     }
+  }
+
+  checkIfEmptyJson(json: any): boolean {
+    if (json) {
+      if (Object.keys(json).length == 0) return false;  // TODO: check for Date (length = 0)
+    }
+    return true;
   }
 }

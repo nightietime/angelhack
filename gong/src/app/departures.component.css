@@ -30,6 +30,23 @@ body > my-departures > departure-detail > div > div > div > div > div > div.curr
   font-size: 33px;
 }
 
+p.expected {
+  font-size:14px;
+}
+
+p.disruption {
+  font-size: 16px;
+  text-align: justify;
+}
+
+p.justify {
+  text-align: justify;
+}
+
+a.onlight {
+  color: blue;
+}
+
 .jumbotron {
   background-image: url("./96_hero.JPG");
   min-height: 200px;
@@ -105,15 +122,15 @@ body > my-departures > departure-detail > div > div > div > div > div > div.curr
   padding-bottom: 4px;
   padding-left: 18px;
   padding-right: 18px;
-  border-radius:31px;
+  /*border-radius:31px;*/
   box-sizing: border-box;
   margin-right: 10px;
   text-align: center;
   font-size: 40px;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
-  color: #fff;
-  border: 10px solid;
+  /*color: #fff;*/
+  /*border: 10px solid;*/
   background-color: #000;
 
 }
