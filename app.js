@@ -88,6 +88,7 @@ app.get("/departures", function(req, res) {
                 // Iterate every run id in runCrowdednessObject and calculate the average of every run id
                 for (var run in runCrowdedness) {
                     runCrowdedness[run].average = Math.round(runCrowdedness[run].crowdedness / runCrowdedness[run].count);
+                    console.log(runCrowdedness[run].average);
                     // Classify level of crowdedness
                     if (runCrowdedness[run].average == 0) {
                         runCrowdedness[run]["class"] = "Empty";
@@ -105,14 +106,14 @@ app.get("/departures", function(req, res) {
 
                 // Check how many people rated dirty
                 for (var run in runCrowdedness) {
-                    if (runCrowdedness[run].dirtyLevel > 10) {
+                    if (runCrowdedness[run].dirtyLevel > 0) {
                         runCrowdedness[run].dirtyLevel = true;
                     }
                     else {
                         runCrowdedness[run].dirtyLevel = false;
                     }
 
-                    if (runCrowdedness[run].speedingLevel > 10) {
+                    if (runCrowdedness[run].speedingLevel > 0) {
                         runCrowdedness[run].speedingLevel = true;
                     }
                     else {
