@@ -69,6 +69,7 @@ app.get("/departures", function(req, res) {
             routeIds.push(departures[i].route_id);
           }
         }
+        console.log(routeIds);
 
         // Check status and error reporting before processing JSON
         if (!error && response.statusCode == 200) {
