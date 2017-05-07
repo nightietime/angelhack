@@ -60,13 +60,13 @@ var groupByRouteDirectionID = function(ptvData) {
 // GET request. params - stopid: int
 app.get("/departures", function(req, res) {
     var callback = function(error, response, body) {
-        var routeIds = [];
+        var runIds = [];
         if (body) { // body: PTV response
           // get a list of route IDs
           var ptvData = JSON.parse(body);
           var departures = ptvData.departures;
           for (let i=0; i<departures.length; i++) {
-            routeIds.push(departures[i].route_id);
+            runIds.push(departures[i].run_id);
           }
         }
         console.log(routeIds);
@@ -77,7 +77,7 @@ app.get("/departures", function(req, res) {
             if (response.headers['content-type'] == 'text/html') res.json({status: 'error'});
 
             // Get Crowdedness from database
-            Crowdedness.find({routeID: {$in: routeIds}}, function(err, result) {
+            Crowdedness.find({runID: {$in: runIds}}, function(err, result) {
                 // Iterate result and calculate the crowdedness for the requested stop id
                 var total = 0;
                 var runCrowdedness = {};
